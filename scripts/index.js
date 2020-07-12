@@ -1,10 +1,6 @@
 // https://api.chucknorris.io/jokes/random
 
-async function fetchJoke() {
-  const data = await fetch('https://api.chucknorris.io/jokes/random');
-  const joke = await data.json();
-  return joke.value;
-}
+import fetchJoke from './utils';
 
 async function updateView(id) {
   const div = document.getElementById(id);
